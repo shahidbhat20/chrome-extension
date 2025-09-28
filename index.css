@@ -2,12 +2,13 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   min-width: 400px;
-  min-height: 210px;
+  min-height: 220px ;
+  ;
 }
 
 .container {
   width: 100vw;
-  height: 7.5rem;
+  height: 7.4rem;
   background-color: white;
   position: fixed;
   top: 0;
@@ -36,7 +37,7 @@ body {
   justify-content: center; */
   /* align-items: center; */
   width: 91vw;
-    height: 3rem;
+  height: 3rem;
   /* background-color: red; */
   display: flex;
   gap: 10px;
@@ -127,8 +128,8 @@ button {
   height: 2.5rem;
   margin-top: 5px;
   /* background-color: #5f9341; */
-  border: 1px solid #5f9341;
-  color: #5f9341;
+  border: 1px solid red;
+  color: red;
   /* border: none; */
   padding: 6px 20px;
   font-weight: bold;
@@ -147,7 +148,7 @@ ul {
   width: calc(100% - 19px);
   list-style: none;
   padding-left: 0;
-  margin: 20px 20px 0px 15px;
+  margin: 10px 20px 0px 15px;
   position: absolute;
   top: 6rem;
   overflow-y: auto;
@@ -157,7 +158,9 @@ ul {
 
 li {
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+
+  
 
   /* overflow: hidden; */
 }

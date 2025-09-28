@@ -93,32 +93,31 @@ deleteBtn.addEventListener("dblclick", function () {
   console.log("delete button clicked");
 });
 
+
 function deleteLink(showCheckboxes = false) {
   list.innerHTML = "";
 
   myLinks.forEach((item, index) => {
-    const itemDiv = document.createElement("div");
-    itemDiv.className = "item";
-
+    const newListItem = document.createElement("li");
+    
     if (showCheckboxes) {
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.dataset.index = index;
-      itemDiv.appendChild(checkbox);
+      checkbox.className = "delete-checkbox";
+      newListItem.appendChild(checkbox);
     }
 
-    const span = document.createElement("span");
-    span.textContent = item;
-    span.style.marginLeft = "10px";
-    itemDiv.appendChild(span);
-
-    list.appendChild(itemDiv);
+    const link = document.createElement("a");
+    link.target = '_blank';
+    link.href = item;
+    link.textContent = item;
+    link.style.marginLeft = "10px";
+    
+    newListItem.appendChild(link);
+    list.appendChild(newListItem);
   });
 }
-// render(lin)
-
-// Initial render
-// deleteLink();
 
 // Show checkboxes on Delete button click
 deleteLinkBtn.addEventListener("click", () => {
@@ -126,19 +125,24 @@ deleteLinkBtn.addEventListener("click", () => {
   confirmDeleteBtn.classList.remove("hidden");
   deleteLinkBtn.classList.add("hidden");
   cenclebtn.classList.remove("hidden");
+  
+  // Prevent scrolling issues by maintaining container height
+  list.style.minHeight = list.offsetHeight + "px";
 });
 
 cenclebtn.addEventListener("click", function () {
-  console.log("cencle btn clicked");
   render(myLinks);
   cenclebtn.classList.add("hidden");
   deleteLinkBtn.classList.remove("hidden");
   confirmDeleteBtn.classList.add("hidden");
+  
+  // Reset container height
+  list.style.minHeight = "";
 });
 
 // Confirm deletion
 confirmDeleteBtn.addEventListener("click", () => {
-  const checkboxes = list.querySelectorAll('input[type="checkbox"]');
+  const checkboxes = list.querySelectorAll('.delete-checkbox');
   const indexesToDelete = [];
 
   checkboxes.forEach((cb) => {
@@ -153,12 +157,15 @@ confirmDeleteBtn.addEventListener("click", () => {
     .forEach((index) => {
       myLinks.splice(index, 1);
     });
-  // saveToLocalStorage(); // Update localStorage
+    
   localStorage.setItem("myLinks", JSON.stringify(myLinks));
-
-  deleteLink(false); // Refresh list
-  confirmDeleteBtn.classList.add("hidden"); // Hide confirm button
+  
+  // Return to normal view
+  render(myLinks);
+  confirmDeleteBtn.classList.add("hidden");
   deleteLinkBtn.classList.remove("hidden");
   cenclebtn.classList.add("hidden");
-  render(myLinks);
+  
+  // Reset container height
+  list.style.minHeight = "";
 });
