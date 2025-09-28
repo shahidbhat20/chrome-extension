@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 400px;
+  min-height: 210px;
+}
+
+.container {
+  width: 100vw;
+  height: 7.5rem;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  /* display: flex;
+  align-content: center;
+  align-items: center; */
+}
+
+.input-box {
+  width: 100vw;
+  height: 50px;
+}
+.input-el {
+  width: calc(100vw - 39px);
+  /* width: 98%; */
+  height: 45px;
+  margin: 8px 20px 0px 15px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid #5f9341;
+}
+
+.btns-box {
+  /* display: flex;
+  justify-content: center; */
+  /* align-items: center; */
+  width: 91vw;
+    height: 3rem;
+  /* background-color: red; */
+  display: flex;
+  gap: 10px;
+  margin: 7px 5px 0px 15px;
+}
+
+button {
+  width: 12%;
+  height: 86%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-btn {
+  width: 7.5rem;
+  height: 2.5rem;
+  margin-top: 5px;
+  background-color: #5f9341;
+  color: white;
+  border: none;
+  padding: 6px 20px;
+  font-weight: bold;
+  /* margin: 5px 5px 0px 15px; */
+}
+
+.tab-btn {
+  width: 7.5rem;
+  height: 2.5rem;
+  margin-top: 5px;
+  background-color: #5f9341;
+  color: white;
+  border: none;
+  padding: 6px 20px;
+  font-weight: bold;
+}
+
+.delete-link-btn {
+  width: 7.5rem;
+  height: 2.5rem;
+  margin-top: 5px;
+  /* background-color: #5f9341; */
+  border: 1px solid #5f9341;
+  color: #5f9341;
+  /* border: none; */
+  padding: 6px 20px;
+  font-weight: bold;
+  /* margin: 5px 20px 0px 5px; */
+}
+
+#cencleBtn {
+  margin-top: 10px;
+  /* width: 7.5rem;
+  height: 2.5rem; */
+ width: 16%;
+  height: 86%;
+  margin-top: 5px;
+  /* background-color: #5f9341; */
+  border: 1px solid blue;
+  color: blue;
+  /* border: none; */
+  padding: 6px 20px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+#confirmDeleteBtn {
+  margin-top: 10px;
+  /* width: 7.5rem;
+  height: 2.5rem; */
+  width: 17%;
+  height: 86%;
+  margin-top: 5px;
+  /* background-color: #5f9341; */
+  border: 1px solid red;
+  color: red;
+  /* border: none; */
+  padding: 6px 20px;
+  font-weight: bold;
+  /* margin: 10px 20px 0px 5px; */
+}
+
+.delete-btn {
+  width: 4rem;
+  height: 2.5rem;
+  margin-top: 5px;
+  /* background-color: #5f9341; */
+  border: 1px solid #5f9341;
+  color: #5f9341;
+  /* border: none; */
+  padding: 6px 20px;
+  font-weight: bold;
+  /* margin: 5px 20px 0px 5px; */
+}
+
+/* .links {
+    width: 100vw;
+    height: 40px;
+    background-color: green;
+} */
+
+ul {
+  height: 120px;
+  /* width: 95%; */
+  width: calc(100% - 19px);
+  list-style: none;
+  padding-left: 0;
+  margin: 20px 20px 0px 15px;
+  position: absolute;
+  top: 6rem;
+  overflow-y: auto;
+  /* overflow: hidden; */
+  /* border: 1px solid #ccc; */
+}
+
+li {
+  margin-top: 10px;
+  margin-bottom: 5px;
+
+  /* overflow: hidden; */
+}
+
+a {
+  color: #5f9341;
+  font-size: large;
+}
