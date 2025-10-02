@@ -3,7 +3,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   min-width: 400px;
   min-height: 220px ;
-  ;
+  
 }
 
 .container {
@@ -85,20 +85,15 @@ button {
   /* border: none; */
   padding: 6px 20px;
   font-weight: bold;
-  /* margin: 5px 20px 0px 5px; */
 }
 
 #cencleBtn {
   margin-top: 10px;
-  /* width: 7.5rem;
-  height: 2.5rem; */
- width: 16%;
+  width: 16%;
   height: 86%;
   margin-top: 5px;
-  /* background-color: #5f9341; */
   border: 1px solid blue;
   color: blue;
-  /* border: none; */
   padding: 6px 20px;
   font-weight: bold;
 }
@@ -127,24 +122,14 @@ button {
   width: 4rem;
   height: 2.5rem;
   margin-top: 5px;
-  /* background-color: #5f9341; */
   border: 1px solid red;
   color: red;
-  /* border: none; */
   padding: 6px 20px;
   font-weight: bold;
-  /* margin: 5px 20px 0px 5px; */
 }
-
-/* .links {
-    width: 100vw;
-    height: 40px;
-    background-color: green;
-} */
 
 ul {
   height: 120px;
-  /* width: 95%; */
   width: calc(100% - 19px);
   list-style: none;
   padding-left: 0;
@@ -152,17 +137,12 @@ ul {
   position: absolute;
   top: 6rem;
   overflow-y: auto;
-  /* overflow: hidden; */
-  /* border: 1px solid #ccc; */
+  
 }
 
 li {
   margin-top: 10px;
   margin-bottom: 10px;
-
-  
-
-  /* overflow: hidden; */
 }
 
 a {
